@@ -4,6 +4,7 @@
 // -------------------------------------------------------------
 
 var _ = require('lodash');
+var fs = require("fs");
 var argv = require('yargs').argv;
 var build = require('./build');
 
@@ -18,12 +19,15 @@ var commands = [
   "server"
 ]
 
-// Check that there's an assets.json file in cwd
+// Check that there's a config.json file
+var config = JSON.parse(fs.readFileSync('./config.json'));
+if(!config) {
+  return console.log("config.json does not exist");
+}
 
 // Check that we got a correct command
 if(!_.includes(["build"], cmd)) {
-  console.log("Wrong command provided");
-  return;
+  return console.log("Wrong command provided");
 }
 
-if(cmd == "build") build(argv);
+if(cmd == "build") build(argv, config);
