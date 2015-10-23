@@ -8,7 +8,8 @@
     "glob": "5.0.15",
     "lodash": "3.10.1",
     "node-sass": "3.3.3",
-    "yargs": "3.29.0"
+    "yargs": "3.29.0",
+    "mkdirp" : "0.5.1"
   },
   "devDependencies": {},
   "preferGlobal": true,
