@@ -19,7 +19,7 @@ Phew requires you to add a `config.json` file in the folder that the `phew` comm
 Will build the assets.
 
 - `--minify` will minify the assets
-- `--versionize` will add version number to files
+- `--versionize` will add the version number to the files
 
 #### NOT READY `phew publish`
 

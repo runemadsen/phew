@@ -9,7 +9,10 @@
     "lodash": "3.10.1",
     "node-sass": "3.3.3",
     "yargs": "3.29.0",
-    "mkdirp" : "0.5.1"
+    "mkdirp" : "0.5.1",
+    "browserify" : "11.2.0",
+    "babelify" : "6.4.0",
+    "uglifyify" : "3.0.1"
   },
   "devDependencies": {},
   "preferGlobal": true,
