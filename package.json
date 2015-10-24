@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
-  "name": "gulp-asset-pipeline",
-  "description": "A stand-alone asset pipeline written with Gulp that publishes to S3",
+  "name": "phew",
+  "description": "Phew is a simple, opinionated, stand-alone asset pipeline that builds and publishes SASS and ES6 JavaScript assets to S3.",
   "author": "runemadsen",
   "license": "MIT",
   "dependencies": {
@@ -14,6 +14,6 @@
   "devDependencies": {},
   "preferGlobal": true,
   "bin": {
-    "assets": "src/index.js"
+    "phew": "src/index.js"
   }
 }
