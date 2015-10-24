@@ -2,9 +2,9 @@
 
 Phew is a simple, opinionated, stand-alone asset pipeline that builds CSS (SCSS) and JavaScript (ECMAScript 6) assets into bundles, and publishes them to S3, so they can be referenced from your HTML pages.
 
-I was tired of bundling my JS and CSS assets into my Golang binaries, and realized that a simple thing like using version numbers instead of fingerprints in my asset filenames would allow be to completely detach my assets from my web server code, while preserving the nice cache invalidation that comes with fingerprinted files. 
+I was tired of bundling my JS and CSS assets into my Golang binaries, and realized that a simple thing like using version numbers instead of fingerprints in my asset filenames would allow me to completely remove my assets from my web server repo, while preserving the nice cache invalidation that comes with fingerprinted files. 
 
-With Phew, I just need to maintain a single constant in my web server, the asset version number.
+With Phew, I just need to maintain a single constant in my web server, the asset version number, and I can eliminate all the headaches that come from asset precompilation and merge conflicts in `manifest.json` files.
 
 ## Configuration
 
