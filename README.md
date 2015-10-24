@@ -21,7 +21,7 @@ Will build the assets.
 - `--minify` will minify the assets
 - `--versionize` will add the version number to the files
 
-#### NOT READY `phew publish`
+#### `phew publish` (NOT IMPLEMENTED)
 
 Will publish the assets to S3 using the config settings.
 
