@@ -2,13 +2,15 @@
 
 Phew is a simple, opinionated, stand-alone asset pipeline that builds and publishes SASS and ES6 JavaScript assets to S3.
 
-Phew makes it easy to have a stand-alone assets repo that publishes assets to S3, whereafter these assets can be referenced in your HTML only by knowing the version number.
+Phew makes it easy to have a stand-alone assets repo that publishes to S3, whereafter these assets can be referenced in your HTML only by knowing the version number.
 
 ## Configuration
 
-Simply add `javascripts` and `stylesheets` folders with `.scss` and `.js` files, and `phew` will build each of these files into an asset bundle. You can use `@import` in your `.scss` files and `import` in your `.js` files to combine files from subfolders.
+Phew will build any file located in the root of `javascripts` or `stylesheets` in the folder where the `phew` command is run.
 
-You also need to add a `config.json` file that at least defines the version number to use when versionizing. Look in the `example` folder to see a basic setup.
+This means that you can create multiple JS and CSS bundles by having several files that imports other files in subfolders. See the `example` folder for a basic example.
+
+Phew requires you to add a `config.json` file in the folder that the `phew` command is being run. This file must at least have a `version` property that is used when using `--versionize`.
 
 ## Commands
 
