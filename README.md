@@ -12,14 +12,14 @@ You also need to add a `config.json` file that at least defines the version numb
 
 ## Commands
 
-### `phew build`
+#### `phew build`
 
 Will build the assets.
 
 - `--minify` will minify the assets
 - `--versionize` will add version number to files
 
-### NOT READY `phew publish`
+#### NOT READY `phew publish`
 
 Will publish the assets to S3 using the config settings.
 
