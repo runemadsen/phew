@@ -6,11 +6,19 @@ I was tired of bundling my JS and CSS assets into my Golang binaries, and realiz
 
 With Phew, I just need to maintain a single constant in my web server, the asset version number, and I can eliminate all the headaches that come from asset precompilation and merge conflicts in `manifest.json` files.
 
-## Configuration
+## The way it works
 
-Phew will build any file located in the root of the `javascripts` or `stylesheets` folders. This means that you can create multiple JS and CSS bundles by having files that imports other files from subfolders.
+Phew will build any file located in the root of the `javascripts` or `stylesheets` folders from where the command is run. This means that you can create multiple JS and CSS bundles by having files that imports other files from subfolders. CSS files use the `@import` statement. JS files use the `import` statement. 
 
-Phew requires you to add a `config.json` file in the folder where the `phew` command is run. This file must at least have a `version` property that is used when using `--versionize`.
+See the `example` folder for a simple example.
+
+## Getting started
+
+1. Create a `config.json` file in your new assets folder, with at least a `version` property. This determines the version number in the compiled asset filenames.
+2. Create a `javascripts` and `stylesheets` folder and add files
+3. Run `phew build`
+
+Voila!
 
 ## Commands
 
