@@ -4,7 +4,7 @@ Phew is a simple, opinionated, stand-alone asset pipeline that builds CSS (SCSS)
 
 I was tired of bundling my JS and CSS assets into my Golang binaries, and realized that a simple thing like using version numbers instead of fingerprints in my asset filenames would allow me to completely remove my assets from my web server repo, while preserving the nice cache invalidation that comes with fingerprinted files. 
 
-With Phew, I just need to maintain a single constant in my web server, the asset version number, and I can eliminate all the headaches that come from asset precompilation and merge conflicts in `manifest.json` files.
+With Phew, I just need to maintain a single constant in my web server, the asset version number, and I can eliminate all the headaches that come from checking in your frontend code with your backend code. For services like Elastic Beanstalk and Heroku that uses your Git repo as a delivery mechanism, this repo can help you tremendously (no merge conflicts in compiled assets, etc).
 
 ## The way it works
 
