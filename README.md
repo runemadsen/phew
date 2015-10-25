@@ -31,7 +31,7 @@ Will build the assets.
 
 #### `phew server`
 
-Use the `server` command for local development. Simply point link your HTML pages to the phew server, and it'll recompile assets whenever they change.
+Use the `server` command for local development. Simply point your HTML asset links to the phew server, and it'll recompile assets whenever they change.
 
 - `--port` will set the localhost port
 - `--minify` (see above)
