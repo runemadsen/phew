@@ -8,7 +8,7 @@ With Phew, I just need to maintain a single constant in my web server, the asset
 
 ## The way it works
 
-Phew will build any file located in the root of the `javascripts` or `stylesheets` folders from where the command is run. This means that you can create multiple JS and CSS bundles by having files that imports other files from subfolders. CSS files use the `@import` statement. JS files use the `import` statement. 
+Phew will build any file located in the root of the `javascripts` or `stylesheets` folders from where the command is run. This means that you can create multiple JS and CSS bundles by having files that imports other files from subfolders. CSS files can use the `@import` statement. JS files can use the `import` statement. 
 
 See the `example` folder for a simple example.
 
