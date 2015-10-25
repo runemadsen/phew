@@ -7,6 +7,7 @@ var _ = require('lodash');
 var fs = require("fs");
 var argv = require('yargs').argv;
 var build = require('./build');
+var server = require('./server');
 
 // Variables
 // -------------------------------------------------------------
@@ -26,8 +27,9 @@ if(!config) {
 }
 
 // Check that we got a correct command
-if(!_.includes(["build"], cmd)) {
+if(!_.includes(commands, cmd)) {
   return console.log("Wrong command provided");
 }
 
 if(cmd == "build") build(argv, config);
+if(cmd == "server") server(argv, config);

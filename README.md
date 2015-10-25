@@ -29,15 +29,17 @@ Will build the assets.
 - `--minify` will minify the assets
 - `--versionize` will add the version number to the files
 
-#### `phew server` (NOT IMPLEMENTED)
+#### `phew server`
 
-Used for development. Simply boot up Phew and load your assets from `localhost:port`. Phew will automatically watch for changes to assets and restart the server.
+Use the `server` command for local development. Simply point link your HTML pages to the phew server, and it'll recompile assets whenever they change.
 
 - `--port` will set the localhost port
+- `--minify` (see above)
+- `--versionize` (see above)
 
 #### `phew publish` (NOT IMPLEMENTED)
 
 Will publish the assets to S3 using the config settings.
 
-- `--minify` will minify the assets
-- `--versionize` will add version number to files
+- `--minify` (see above)
+- `--versionize` (see above)
