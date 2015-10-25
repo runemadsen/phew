@@ -8,6 +8,7 @@ var fs = require("fs");
 var argv = require('yargs').argv;
 var build = require('./build');
 var server = require('./server');
+var publish = require('./publish');
 
 // Variables
 // -------------------------------------------------------------
@@ -16,8 +17,8 @@ var args = process.argv;
 var cmd = args[2];
 var commands = [
   "build",
-  "publish",
-  "server"
+  "server",
+  "publish"
 ]
 
 // Check that there's a config.json file
@@ -32,4 +33,5 @@ if(!_.includes(commands, cmd)) {
 }
 
 if(cmd == "build") build(argv, config);
-if(cmd == "server") server(argv, config);
+else if(cmd == "server") server(argv, config);
+else if(cmd == "publish") publish(argv, config);

@@ -39,11 +39,11 @@ Use the `server` command for local development. Simply point your HTML asset lin
 
 #### `phew publish`
 
-Will publish the assets to S3.
+Publishes all files in the `build` directory to S3. In a normal workflow you will run `phew build` then `phew publish`.
 
 - `--s3Id` Specifies the S3 ID to use. Can also be set in `config.json`
 - `--s3Secret` Specifies the S3 Access key to use. Can also be set in `config.json`
-- `--s3Folder` (optional) specifies s3 path to place files. Defaults to root
-- `--minify` (optional) See above
-- `--versionize` (optional) See above
+- `--s3Bucket` Specifies the S3 bucket to use. Can also be set in `config.json`
+- `--s3Prefix` (optional) Specifies s3 prefix for all files. Defaults to ""
+- `--cacheControl` (optional) Specifies the `Cache-Control` header. Defaults to `public, max-age=31536000`
 

@@ -4,6 +4,7 @@ var sass = require('node-sass');
 var fs = require('fs');
 var path = require('path');
 var mkdirp = require('mkdirp');
+var rimraf = require('rimraf');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var uglifyify = require('uglifyify');
@@ -74,13 +75,18 @@ function buildCSS(argv, config) {
 
 module.exports = function(argv, config) {
 
-  // create build dir if doesn't exist
-  mkdirp('./build', function (err) {
-    if (err) {
-      console.error(err)
-    } else {
-      buildCSS(argv, config);
-      buildJS(argv, config);
-    }
+  // delete entire build directory
+  rimraf('build', function() {
+
+    // recreate build dir
+    mkdirp('build', function (err) {
+      if (err) {
+        console.error(err)
+      } else {
+        buildCSS(argv, config);
+        buildJS(argv, config);
+      }
+    });
+
   });
 }

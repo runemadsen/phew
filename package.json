@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "phew",
   "description": "Phew is a simple, opinionated, stand-alone asset pipeline that builds and publishes SASS and ES6 JavaScript assets to S3.",
   "author": "runemadsen",
@@ -16,7 +16,8 @@
     "express" : "4.13.3",
     "serve-static" : "1.10.0",
     "gaze": "0.5.2",
-    "s3" : "4.4.0"
+    "s3" : "4.4.0",
+    "rimraf": "2.4.3"
   },
   "devDependencies": {},
   "preferGlobal": true,
