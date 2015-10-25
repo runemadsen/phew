@@ -5,7 +5,7 @@ var serveStatic = require('serve-static');
 var build = require('./build');
 var gaze = require('gaze');
 
-// Main
+// Server
 // -------------------------------------------------------------
 
 module.exports = function(argv, config) {

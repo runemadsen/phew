@@ -15,7 +15,8 @@
     "uglifyify" : "3.0.1",
     "express" : "4.13.3",
     "serve-static" : "1.10.0",
-    "gaze": "0.5.2"
+    "gaze": "0.5.2",
+    "s3" : "4.4.0"
   },
   "devDependencies": {},
   "preferGlobal": true,

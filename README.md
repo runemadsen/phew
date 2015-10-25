@@ -26,20 +26,24 @@ Voila!
 
 Will build the assets.
 
-- `--minify` will minify the assets
-- `--versionize` will add the version number to the files
+- `--minify` (optional) Minifies the assets
+- `--versionize` (optional) Adds version number to the files
 
 #### `phew server`
 
 Use the `server` command for local development. Simply point your HTML asset links to the phew server, and it'll recompile assets whenever they change.
 
-- `--port` will set the localhost port
-- `--minify` (see above)
-- `--versionize` (see above)
+- `--port` (optional) Sets the localhost port. Defaults to 3450.
+- `--minify` (optional) See above
+- `--versionize` (optional) See above
 
-#### `phew publish` (NOT IMPLEMENTED)
+#### `phew publish`
 
-Will publish the assets to S3 using the config settings.
+Will publish the assets to S3.
 
-- `--minify` (see above)
-- `--versionize` (see above)
+- `--s3Id` Specifies the S3 ID to use. Can also be set in `config.json`
+- `--s3Secret` Specifies the S3 Access key to use. Can also be set in `config.json`
+- `--s3Folder` (optional) specifies s3 path to place files. Defaults to root
+- `--minify` (optional) See above
+- `--versionize` (optional) See above
+
